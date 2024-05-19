@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moi Przyjaciele</title>
+</head>
+<body>
+    <h1 id="header">Moi Przyjaciele</h1>
+    <nav>
+        <a class="menu" href="index.html">O mnie</a>
+        <a class="menu-active">Moi Przyjaciele</a>
+        <a class="menu" href="zwierzeta.html">Zwierzęta</a>
+        <a class="menu" href="zainteresowania.html">Zainteresowania</a>
+        <a class="menu" href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <section class="content">
+        <p id="Omn">Mam wielu przyjaciół, z którymi spędzam czas. Oto kilka z nich:</p>
+        
+        <!-- Image presentation -->
+        <div class="image-presentation">
+            <button class="prev" onclick="showPrevImage()">Poprzednie</button>
+            <img id="current-image" src="friend1.jpg" alt="Friend 1">
+            <button class="next" onclick="showNextImage()">Następne</button>
+        </div>
+    </section>
+
+    <script>
+        const images = [
+            'friend1.jpg',
+            'friend2.jpg',
+            'friend3.jpg',
+            'friend4.jpg'
+        ];
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const imageElement = document.getElementById('current-image');
+            imageElement.src = images[index];
+            imageElement.alt = 'Friend ' + (index + 1);
+        }
+
+        function showPrevImage() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            showImage(currentIndex);
+        }
+
+        function showNextImage() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>

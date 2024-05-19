@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style6.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+</head>
+<body>
+    <h1 id="header">Kontakt</h1>
+    <nav>
+        <a class="menu" href="index.html">O mnie</a>
+        <a class="menu" href="przyjaciele.html">Moi Przyjaciele</a>
+        <a class="menu" href="zwierzeta.html">Zwierzęta</a>
+        <a class="menu" href="zainteresowania.html">Zainteresowania</a>
+        <a class="menu-active">Kontakt</a>
+    </nav>
+
+    <section class="content">
+        <p>Jeśli masz pytania, wypełnij poniższy formularz, aby się ze mną skontaktować.
+            Mój mail to: <a href="https://gmail.com" target="_blank">jg90490@stud.uws.edu.pl</a>
+        </p>
+        
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="email">Twój e-mail:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Wiadomość:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+</body>
+</html>
